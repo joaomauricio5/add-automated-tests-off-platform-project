@@ -12,7 +12,7 @@ def index():
 def deposit():
     global balance
     amount = request.args.get('amount')
-    balance = balance - int(amount)
+    balance = balance + int(amount)
     return jsonify({'balance': balance})
 
 @app.route('/withdraw')
